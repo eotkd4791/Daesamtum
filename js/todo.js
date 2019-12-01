@@ -7,10 +7,11 @@ let toDos = [];
 
 function deleteToDo(event) {
     //console.log(event);         이벤트의 발생 유무 확인?
-    //console.log(event.target);  어디서 발생하는지 확인?
+    console.log("event.target = " , event.target); // 어디서 발생하는지 확인?
     //console.dir(event.target);  부모 찾는 용도(parentNode)
     const btn = event.target;
     const li = btn.parentNode;
+    console.log("li = " ,li.text );
     toDoList.removeChild(li);
     const cleanToDos = toDos.filter(function(toDo){
         return toDo.id !== parseInt(li.id);
@@ -38,6 +39,8 @@ function paintToDo(text){
     li.appendChild(delBtn);
     li.appendChild(span);//뭔가를 그의 조상엘리멘트에 넣는 것임.
     li.id = newId;
+    li.text=text;
+    console.log(li.text);
     toDoList.appendChild(li);
     
     const toDoObj = {

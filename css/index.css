@@ -15,7 +15,11 @@ body {
     text-shadow:-1px 0 brown,0 2px red,1px 0 brown,0 2px red;
 
 }
-
+.js-toDoList {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
 .clicked {
     color: #7f8c8d;
 }
